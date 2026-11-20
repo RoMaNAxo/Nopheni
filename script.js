@@ -13,7 +13,7 @@ const soundH = document.getElementById("sound-h");
 const soundCat = document.getElementById("sound-cat");
 const soundBtn = document.getElementById("sound-btn");
 
-function playSound(audio, volume = 5) {
+function playSound(audio, volume = 1) {
   if (!audio) return;
   audio.currentTime = 0;
   audio.volume = volume;

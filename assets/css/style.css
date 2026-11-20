@@ -16,8 +16,6 @@
 body {
   background-color: var(--bcg);
   color: var(--text);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   cursor:
     url("../images/fish.png") 16 16,
@@ -37,13 +35,11 @@ button {
   }
 }
 
-@supports (animation-timeline: scroll()) {
-  body:not(.inner) header::before {
-    opacity: 0;
-    animation: header-bg linear both;
-    animation-timeline: scroll(root);
-    animation-range: calc(20vh - 120px) 20vh;
-  }
+header::before {
+  opacity: 0;
+  animation: header-bg linear both;
+  animation-timeline: scroll(root);
+  animation-range: calc(20vh - 120px) 20vh;
 }
 
 @font-face {
@@ -142,6 +138,7 @@ header::before {
   transition: 0.3s;
 
   &:hover {
+    color: var(--green);
   }
 }
 
@@ -166,7 +163,7 @@ header::before {
   height: 100vh;
   width: 100vw;
 
-  position: relative;
+  /* position: relative;
   video {
     position: absolute;
     z-index: -1;
@@ -175,7 +172,7 @@ header::before {
     top: 0;
     left: 0;
     object-fit: cover;
-  }
+  } */
 }
 
 .hero__content {
@@ -207,11 +204,25 @@ header::before {
   background-color: var(--green);
   color: var(--bcg);
   padding: 12px 24px;
+  transition: 0.3s;
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: var(--bcg);
+    color: var(--green);
+    border: 2px solid var(--green);
+  }
 }
 
 .trailer--btn {
   background-color: var(--container);
   padding: 12px 24px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--text);
+    color: var(--bcg);
+  }
 }
 
 /* Баннер конец */
@@ -281,7 +292,6 @@ header::before {
   flex-direction: column;
   align-items: center;
 
-  will-change: transform, opacity, filter;
   animation-timeline: view();
   animation-range: entry 40% cover 40%;
   animation-fill-mode: both;
@@ -407,7 +417,7 @@ header::before {
   pointer-events: none;
 }
 
-.trailer__slide > * {
+.trailer__slide {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -461,6 +471,10 @@ header::before {
   padding-top: 170px;
 }
 
+.features__content {
+  position: relative;
+}
+
 .features-up__title {
   position: absolute;
   left: 455px;
@@ -489,80 +503,80 @@ header::before {
   position: absolute;
   width: 144px;
   height: 150px;
-  left: 487px;
-  top: 5535px;
+  left: 213px;
+  top: 535px;
 }
 
 .w {
   position: absolute;
   width: 144px;
   height: 150px;
-  left: 626px;
-  top: 5381px;
+  left: 346px;
+  top: 381px;
 }
 
 .s {
   position: absolute;
   width: 144px;
   height: 150px;
-  left: 626px;
-  top: 5535px;
+  left: 346px;
+  top: 535px;
 }
 
 .d {
   position: absolute;
   width: 142px;
   height: 150px;
-  left: 774px;
-  top: 5533px;
+  left: 485px;
+  top: 533px;
 }
 
 .c {
   position: absolute;
   width: 144px;
   height: 150px;
-  left: 768px;
-  top: 5689px;
+  left: 480px;
+  top: 689px;
 }
 
 .f {
   position: absolute;
   width: 147px;
   height: 150px;
-  left: 916px;
-  top: 5538px;
+  left: 646px;
+  top: 538px;
 }
 
 .esc {
   position: absolute;
   width: 147px;
   height: 150px;
-  left: 339px;
-  top: 5230px;
+  left: 79px;
+  top: 230px;
 }
 
 .h {
   position: absolute;
   width: 144px;
   height: 150px;
-  left: 1339px;
-  top: 5231px;
+  left: 1079px;
+  top: 231px;
 }
 
 .space {
   position: absolute;
   width: 401px;
   height: 150px;
-  left: 1036px;
-  top: 5683px;
+  left: 786px;
+  top: 683px;
 }
 
 .shift {
   position: absolute;
   width: 280px;
   height: 150px;
-  left: 387px;
-  top: 5682px;
+  left: 147px;
+  top: 682px;
 }
 
 .a:hover,
@@ -596,6 +610,34 @@ header::before {
 /* Возможности конец */
 
 /* Фотокамера */
+
+.photocam {
+  padding-top: 170px;
+}
+
+.photocam__title {
+  position: absolute;
+  left: 10px;
+  top: -40px;
+  color: var(--green);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.photocam__title {
+  z-index: 1;
+  color: var(--text);
+  text-shadow: 0px 4px 30px var(--green);
+}
+
+.trailer-down__title {
+  position: absolute;
+  left: -10px;
+  top: 40px;
+  color: var(--green);
+  opacity: 10%;
+  z-index: -1;
+}
 
 /* Фотокамера конец */
 
