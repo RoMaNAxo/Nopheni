@@ -6,15 +6,13 @@
   --container: #2a332e;
 }
 
-.class {
-	background-color: var(--bcg);
-}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  123456
 }
 
 body {
