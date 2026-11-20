@@ -1,0 +1,595 @@
+:root {
+  --green: #27d190;
+  --red: #ff0000;
+  --bcg: #0a0f0d;
+  --text: #c9d1d9;
+  --container: #2a332e;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bcg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  cursor:
+    url("../images/fish.png") 16 16,
+    auto;
+}
+
+a,
+button {
+  cursor:
+    url("../images/fish-active.png") 16 16,
+    auto;
+}
+
+@keyframes header-bg {
+  to {
+    opacity: 1;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  body:not(.inner) header::before {
+    opacity: 0;
+    animation: header-bg linear both;
+    animation-timeline: scroll(root);
+    animation-range: calc(20vh - 120px) 20vh;
+  }
+}
+
+@font-face {
+  font-family: "title";
+  src: url(../fonts/AlumniSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: "desc-light";
+  src: url(../fonts/JetBrainsMono-Light.ttf);
+}
+
+@font-face {
+  font-family: "desc-regular";
+  src: url(../fonts/JetBrainsMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: "desc-medium";
+  src: url(../fonts/JetBrainsMono-Medium.ttf);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "title";
+  font-size: 80px;
+  font-weight: normal;
+}
+
+.btn {
+  display: inline-block;
+  width: fit-content;
+  font-family: "title";
+  font-size: 32px;
+  border-radius: 2px;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+/* Шапка  */
+
+.header {
+  margin-top: 22px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+header::before {
+  content: "";
+
+  /* background-color: #c9d1d923; */
+
+  position: absolute;
+
+  inset: 0 -40px;
+
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+
+  z-index: -1;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 41px;
+  font-size: 20px;
+  font-family: "desc-light";
+}
+
+.nav__link {
+  transition: 0.3s;
+
+  &:hover {
+  }
+}
+
+.header__actions {
+  a {
+    border: 2px solid var(--bcg);
+  }
+}
+
+/* Шапка конец */
+
+/* Баннер */
+/* 
+.top__section {
+  background: url("../images/61c364ef95684dda8970dd5e1e1f4797\ 1.png") no-repeat
+    center / cover;
+  height: 100vh;
+} */
+.hero {
+  background: url("../images/61c364ef95684dda8970dd5e1e1f4797\ 1.png") no-repeat
+    center / cover;
+  height: 100vh;
+  width: 100vw;
+
+  position: relative;
+  video {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__title {
+  font-size: 133px;
+  max-width: 1100px;
+  line-height: 90%;
+  padding-top: 300px;
+}
+
+.hero__desc {
+  padding-top: 28px;
+  padding-bottom: 87px;
+  max-width: 695px;
+  font-size: 32px;
+  font-family: "desc-regular";
+}
+
+.hero__actions {
+  display: flex;
+  gap: 15px;
+}
+
+.steam--btn {
+  background-color: var(--green);
+  color: var(--bcg);
+  padding: 12px 24px;
+}
+
+.trailer--btn {
+  background-color: var(--container);
+  padding: 12px 24px;
+}
+
+/* Баннер конец */
+
+/* Об игре */
+
+.about-game {
+  margin-top: 160px;
+}
+
+.title-group {
+  position: relative;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.about-game-up__title {
+  position: absolute;
+  left: 515px;
+  top: -40px;
+  color: var(--red);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.about-game__title {
+  z-index: 1;
+  color: var(--text);
+  text-shadow: 0px 4px 30px var(--red);
+}
+
+.about-game-down__title {
+  position: absolute;
+  left: 490px;
+  top: 40px;
+  color: var(--red);
+  opacity: 10%;
+  z-index: -1;
+}
+
+.about-game__desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  font-family: "desc-light";
+  font-size: 32px;
+}
+
+.wdt {
+  width: 780px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 159px 79px;
+  width: 100%;
+  margin-top: 533px;
+}
+
+.gallery-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  will-change: transform, opacity, filter;
+  animation-timeline: view();
+  animation-range: entry 40% cover 40%;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.gallery-card:nth-child(odd) {
+  animation-name: fog-from-left;
+}
+
+.gallery-card:nth-child(even) {
+  animation-name: fog-from-right;
+}
+
+.gallery-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.gallery-caption {
+  margin-top: 28px;
+  text-align: center;
+  font-family: "desc-light";
+  font-size: 24px;
+}
+
+@keyframes fog-from-left {
+  from {
+    opacity: 0;
+    filter: blur(16px);
+    transform: translateX(-90px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fog-from-right {
+  from {
+    opacity: 0;
+    filter: blur(16px);
+    transform: translateX(90px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Об игре конец */
+
+/* Трейлер */
+
+.trailer {
+  padding: 170px 0;
+}
+
+.trailer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trailer-up__title {
+  position: absolute;
+  left: 10px;
+  top: -40px;
+  color: var(--green);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.trailer__title {
+  z-index: 1;
+  color: var(--text);
+  text-shadow: 0px 4px 30px var(--green);
+}
+
+.trailer-down__title {
+  position: absolute;
+  left: -10px;
+  top: 40px;
+  color: var(--green);
+  opacity: 10%;
+  z-index: -1;
+}
+
+.trailer__showcase {
+  width: 100%;
+}
+
+.trailer__radio {
+  display: none;
+}
+
+.trailer__media,
+.trailer__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.trailer__main {
+  position: relative;
+  width: 100%;
+  height: 614px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.trailer__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.trailer__slide > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.trailer__thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.trailer__thumb {
+  height: 212px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+#trailer-1:checked ~ .trailer__main .trailer__slide--1,
+#trailer-2:checked ~ .trailer__main .trailer__slide--2,
+#trailer-3:checked ~ .trailer__main .trailer__slide--3,
+#trailer-4:checked ~ .trailer__main .trailer__slide--4 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#trailer-1:checked ~ .trailer__thumbs .trailer__thumb--1,
+#trailer-2:checked ~ .trailer__thumbs .trailer__thumb--2,
+#trailer-3:checked ~ .trailer__thumbs .trailer__thumb--3,
+#trailer-4:checked ~ .trailer__thumbs .trailer__thumb--4 {
+  opacity: 1;
+  border-color: var(--green);
+  transform: translateY(-2px);
+  border-radius: 20px;
+}
+
+/* Трейлер конец */
+
+/* Возможности */
+
+.features {
+  padding-top: 170px;
+}
+
+.features-up__title {
+  position: absolute;
+  left: 455px;
+  top: -40px;
+  color: var(--green);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.features__title {
+  z-index: 1;
+  color: var(--text);
+  text-shadow: 0px 4px 30px var(--green);
+}
+
+.features-down__title {
+  position: absolute;
+  left: 410px;
+  top: 40px;
+  color: var(--green);
+  opacity: 10%;
+  z-index: -1;
+}
+
+.a {
+  position: absolute;
+  width: 144px;
+  height: 150px;
+  left: 487px;
+  top: 5535px;
+}
+
+.w {
+  position: absolute;
+  width: 144px;
+  height: 150px;
+  left: 626px;
+  top: 5381px;
+}
+
+.s {
+  position: absolute;
+  width: 144px;
+  height: 150px;
+  left: 626px;
+  top: 5535px;
+}
+
+.d {
+  position: absolute;
+  width: 142px;
+  height: 150px;
+  left: 774px;
+  top: 5533px;
+}
+
+.c {
+  position: absolute;
+  width: 144px;
+  height: 150px;
+  left: 768px;
+  top: 5689px;
+}
+
+.f {
+  position: absolute;
+  width: 147px;
+  height: 150px;
+  left: 916px;
+  top: 5538px;
+}
+
+.esc {
+  position: absolute;
+  width: 147px;
+  height: 150px;
+  left: 339px;
+  top: 5230px;
+}
+
+.h {
+  position: absolute;
+  width: 144px;
+  height: 150px;
+  left: 1339px;
+  top: 5231px;
+}
+
+.space {
+  position: absolute;
+  width: 401px;
+  height: 150px;
+  left: 1036px;
+  top: 5683px;
+}
+
+.shift {
+  position: absolute;
+  width: 280px;
+  height: 150px;
+  left: 387px;
+  top: 5682px;
+}
+
+.a:hover, .w:hover, .s:hover, .d:hover, .c:hover, .f:hover, .esc:hover, .h:hover, .shift:hover, .space:hover {
+  transform: translateY(-4px) scale(1.03);
+  filter: drop-shadow(0 0 15px rgba(39, 209, 144, 0.7)) brightness(1.15);
+}
+
+
+.a:active, .w:active, .s:active, .d:active, .c:active, .f:active, .esc:active, .h:active, .shift:active, .space:active {
+  transform: translateY(3px) scale(0.95);
+  filter: drop-shadow(0 0 6px rgba(39, 209, 144, 0.9)) brightness(1.3);
+}
+
+/* Возможности конец */
+
+/* Фотокамера */
+
+/* Фотокамера конец */
+
+/* Демо */
+
+/* Демо конец */
+
+/* Форма */
+
+/* Форма конец */
+
+/* Подвал */
+
+/* Подвал конец */
