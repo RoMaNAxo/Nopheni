@@ -6,13 +6,11 @@
   --container: #2a332e;
 }
 
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  123456
 }
 
 body {
@@ -567,13 +565,30 @@ header::before {
   top: 5682px;
 }
 
-.a:hover, .w:hover, .s:hover, .d:hover, .c:hover, .f:hover, .esc:hover, .h:hover, .shift:hover, .space:hover {
+.a:hover,
+.w:hover,
+.s:hover,
+.d:hover,
+.c:hover,
+.f:hover,
+.esc:hover,
+.h:hover,
+.shift:hover,
+.space:hover {
   transform: translateY(-4px) scale(1.03);
   filter: drop-shadow(0 0 15px rgba(39, 209, 144, 0.7)) brightness(1.15);
 }
 
-
-.a:active, .w:active, .s:active, .d:active, .c:active, .f:active, .esc:active, .h:active, .shift:active, .space:active {
+.a:active,
+.w:active,
+.s:active,
+.d:active,
+.c:active,
+.f:active,
+.esc:active,
+.h:active,
+.shift:active,
+.space:active {
   transform: translateY(3px) scale(0.95);
   filter: drop-shadow(0 0 6px rgba(39, 209, 144, 0.9)) brightness(1.3);
 }
