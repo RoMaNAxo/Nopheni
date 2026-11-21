@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nophenia</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="shortcut icon" href="" type="image/png" />
+    <link rel="shortcut icon" href="assets/images/logo__favicon/favicon.png" type="image/png" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <div class="page">
       <!-- Шапка -->
 
-      <header class="header" id="hero">
+      <header class="header" id="header">
         <div class="header__content container">
           <a href="/">
             <img
@@ -24,7 +24,7 @@
           <nav class="nav__header">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="#about_game" class="nav__link">об игре</a>
+                <a href="#about-game" class="nav__link">об игре</a>
               </li>
               <li class="nav__item">
                 <a href="#trailer" class="nav__link">трейлер</a>
@@ -36,13 +36,17 @@
                 <a href="#features" class="nav__link">возможности</a>
               </li>
               <li class="nav__item">
-                <a href="#demo" class="nav__link">Демо</a>
+                <a href="#demo" class="nav__link">демо</a>
               </li>
             </ul>
           </nav>
 
           <div class="header__actions">
-            <a href="#Nophenia.net" class="steam--btn btn">В steam</a>
+            <a
+              href="https://store.steampowered.com/app/3979330/nophenia/"
+              class="steam--btn btn"
+              >В steam</a
+            >
           </div>
         </div>
       </header>
@@ -63,8 +67,20 @@
           </p>
 
           <div class="hero__actions">
-            <a href="#Nophenia.net" class="steam--btn btn">В steam</a>
-            <a href="" class="trailer--btn btn">Смотреть трейлер</a>
+            <a
+              href="https://store.steampowered.com/app/3979330/nophenia/"
+              class="steam--btn btn"
+              >В steam</a
+            >
+            <a href="#trailer" class="trailer--btn btn">Смотреть трейлер</a>
+
+            <div class="star-div">
+              <img
+                src="assets/images/banner/star-banner.png"
+                alt=""
+                class="star-banner"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -73,25 +89,39 @@
 
       <!-- Об игре -->
 
-      <section class="about-game">
-        <img src="" alt="" class="about-game__nia" />
-
+      <section class="about-game" id="about-game">
         <div class="about-game__content container">
+          <img src="assets/images/banner/star-banner.png" alt="" class="star-about-game">
           <div class="title-group">
             <h2 class="about-game-up__title title">исследуй сны</h2>
             <h2 class="about-game__title title">исследуй сны</h2>
             <h2 class="about-game-down__title title">исследуй сны</h2>
           </div>
 
-          <div class="about-game__desc">
-            <div class="wdt">
-              «Nophenia» — это проект, который стирает границы между реальностью
-              и сном. Уникальный визуальный стиль, саундтрек, погружающий в
-              транс, и полное отсутствие привычных игровых условностей
+          <div class="about-game_info">
+            <img
+              src="assets/images/about_game/nia_left.png"
+              alt=""
+              class="about-game__nia-left"
+            />
+
+            <div class="about-game__desc">
+              <div class="wdt">
+                «Nophenia» — это проект, который стирает границы между
+                реальностью и сном. Уникальный визуальный стиль, саундтрек,
+                погружающий в транс, и полное отсутствие привычных игровых
+                условностей
+              </div>
             </div>
+
+            <img
+              src="assets/images/about_game/nia_right.png"
+              alt=""
+              class="about-game__nia-right"
+            />
           </div>
 
-          <a href="" class="steam--btn">Заснуть</a>
+          <img src="assets/images/about_game/cursor.svg" alt="" class="mouse" />
 
           <div class="gallery-list">
             <div class="gallery-grid">
@@ -141,15 +171,13 @@
             </div>
           </div>
         </div>
-
-        <img src="" alt="" class="about-game__nia" />
       </section>
 
       <!-- Об игре конец -->
 
       <!-- Трейлер -->
 
-      <section class="trailer">
+      <section class="trailer" id="trailer">
         <div class="trailer__content container">
           <div class="title-group">
             <h2 class="trailer-up__title title">трейлер</h2>
@@ -242,7 +270,7 @@
 
       <!-- Возможности -->
 
-      <section class="features">
+      <section class="features" id="features">
         <div class="features__content container">
           <div class="title-group">
             <h2 class="features-up__title title">ваши возможности</h2>
@@ -284,11 +312,11 @@
               alt=""
               class="polaroid polaroid--1"
             />
-            <!-- <img
+            <img
               src="assets/images/photo_pictures/negativ.png"
               alt=""
               class="polaroid polaroid--2"
-            /> -->
+            />
             <img
               src="assets/images/photo_pictures/oduvan.png"
               alt=""
@@ -326,9 +354,28 @@
 
       <!-- Демо -->
 
-      <section class="demo">
+      <section class="demo" id="demo">
         <div class="demo__content container">
-          <h2 class="demo__title title"></h2>
+          <div class="demo__banner">
+            <img src="assets/images/demo/demo.png" alt="" class="demo__bg" />
+
+            <div class="demo__actions">
+              <a href="#Nophenia.net" class="steam--btn btn">в steam</a>
+              <a href="#download" class="trailer--btn btn">скачать демо</a>
+            </div>
+
+            <img
+              src="assets/images/demo/butterfly.png"
+              alt=""
+              class="demo__butterfly"
+            />
+
+            <input type="checkbox" id="cat-flip" class="demo__cat-check" />
+
+            <label for="cat-flip" class="demo__cat cat">
+              <img src="assets/images/demo/cat.png" alt="" />
+            </label>
+          </div>
         </div>
       </section>
 
@@ -338,7 +385,25 @@
 
       <section class="form" id="form">
         <div class="form__content container">
-          <h2 class="form__title title"></h2>
+          <div class="title-group">
+            <h2 class="form-up__title title">но не забывай про кошмары</h2>
+            <h2 class="form__title title">но не забывай про кошмары</h2>
+            <h2 class="form-down__title title">но не забывай про кошмары</h2>
+          </div>
+
+          <div class="subscribe">
+            <p class="subscribe__title">Подпишись на рассылку</p>
+
+            <form class="subscribe__form" action="#">
+              <input
+                type="email"
+                class="subscribe__input"
+                placeholder="Ваш e-mail"
+                required
+              />
+              <button type="submit" class="subscribe__btn">Подписаться</button>
+            </form>
+          </div>
         </div>
       </section>
 
@@ -348,27 +413,54 @@
 
       <footer class="footer" id="contacts">
         <div class="footer__content container">
-          <h2 class="footer__title title"></h2>
+          <div class="footer__col">
+            <a href="#hero" class="footer__logo">
+              <img src="assets/images/logo__favicon/logo__footer.svg" alt="" />
+            </a>
+            <p class="footer__slogan">Исследуй сны, которые помнят тебя</p>
+          </div>
 
-          <!-- <nav class="nav__footer">
-          <ul class="nav__list-footer">
-            <li class="nav__item">
-              <a href="#about_game" class="nav__link">Об игре</a>
-            </li>
-            <li class="nav__item">
-              <a href="#trailer" class="nav__link">Трейлер</a>
-            </li>
-            <li class="nav__item">
-              <a href="#contacts" class="nav__link">Контакты</a>
-            </li>
-            <li class="nav__item">
-              <a href="#features" class="nav__link">Возможности</a>
-            </li>
-            <li class="nav__item">
-              <a href="#demo" class="nav__link">Демо</a>
-            </li>
-          </ul>
-        </nav> -->
+          <div class="footer__col">
+            <h3 class="footer__title">Навигация</h3>
+            <ul class="footer__list">
+              <li><a href="#about-game" class="footer__link">Об игре</a></li>
+              <li><a href="#trailer" class="footer__link">Трейлер</a></li>
+              <li><a href="#features" class="footer__link">Возможности</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__title">Контакты</h3>
+            <ul class="footer__list">
+              <li>
+                <a href="tel:+79993979999" class="footer__link"
+                  >+7 (999) 397-99-99</a
+                >
+              </li>
+              <li>
+                <a href="mailto:snail@nophenia.ru" class="footer__link"
+                  >snail@nophenia.ru</a
+                >
+              </li>
+            </ul>
+
+            <div class="footer__socials">
+              <a href="#" class="footer__social">
+                <img src="assets/images/footer/vk.png" alt="" />
+              </a>
+              <a href="#" class="footer__social">
+                <img src="assets/images/footer/max.png" alt="" />
+              </a>
+              <a href="#" class="footer__social">
+                <img src="assets/images/footer/twitch.png" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__dev">разработчик: Тихонов Роман 327ВЕБ</p>
+          <p class="footer__copy">© 2026 nophenia. все права защищены</p>
         </div>
       </footer>
 
