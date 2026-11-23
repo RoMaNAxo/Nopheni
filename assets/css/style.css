@@ -187,8 +187,8 @@ header::before {
 
 .star-banner {
   position: absolute;
-  top: 520px;
-  right: -30px;
+  top: 720px;
+  right: -230px;
 }
 
 .hero__title {
@@ -251,7 +251,21 @@ header::before {
 .star-about-game {
   position: absolute;
   top: -200px;
+  left: -430px;
 }
+
+.star-right-about-game {
+  position: absolute;
+  top: 500px;
+  right: -400px;
+}
+
+.star-black-about-game {
+  position: absolute;
+  top: 1500px;
+  left: -400px;
+}
+
 .title-group {
   position: relative;
   text-align: center;
@@ -338,6 +352,16 @@ header::before {
     }
 }
 
+.mog {
+  position: absolute;
+  left: -1130px;
+}
+
+.mog-right {
+  position: absolute;
+  right: -1000px;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -419,6 +443,31 @@ header::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.star-black-trailer {
+  position: absolute;
+  right: -350px;
+  top: 300px;
+}
+
+.star-left-trailer {
+  position: absolute;
+  top: 400px;
+  left: -400px;
+  transform: rotate(45deg);
+}
+
+.star-right-trailer {
+  position: absolute;
+  top: 1200px;
+  right: -400px;
+}
+
+.fog_down {
+  position: absolute;
+  top: -100px;
 }
 
 .trailer-up__title {
@@ -673,6 +722,21 @@ header::before {
 
 .photocam {
   padding-top: 170px;
+}
+
+.photocam__content {
+  position: relative;
+}
+
+.star-left-photocam {
+  position: absolute;
+  left: -230px;
+  transform: rotate(35deg);
+}
+
+.star-black-photocam {
+  position: absolute;
+  right: -230px;
 }
 
 .photocam-up__title {
@@ -993,9 +1057,8 @@ header::before {
   font-family: "title";
   font-size: 28px;
   color: var(--text);
-  transition:
-    background-color 0.25s ease,
-    color 0.25s ease;
+  transition: 0.3s;
+    
 
   &:hover {
     background-color: var(--green);
